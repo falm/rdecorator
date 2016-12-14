@@ -5,11 +5,12 @@ describe Rdecorator do
   class Decorator
 
     def initialize(this, *args)
-
+      @this = this
+      @args = args
     end
 
     def call
-
+      @this.call(*args)
     end
 
   end
@@ -36,7 +37,7 @@ describe Rdecorator do
       'first'
     end
 
-    around :suffix
+    decorator :suffix
     def second
       'second'
     end
@@ -48,8 +49,10 @@ describe Rdecorator do
 
   end
 
-  it '' do
+  subject { DummyClass.new }
 
+  it 'normal' do
+    expect(subject.first).to include 'first'
   end
 
 end
