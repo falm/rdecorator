@@ -17,12 +17,12 @@ describe Rdecorator do
 
   module DecoratorMethods
 
-    def prefix(*)
-      'prefix' << yield
+    def ruby(*)
+      [yield, 'ruby'].join(' ')
     end
 
-    def suffix(*)
-       yield << 'suffix'
+    def python(*)
+      [yield, 'python'].join(' ')
     end
 
   end
@@ -32,19 +32,19 @@ describe Rdecorator do
     extend Rdecorator
     include DecoratorMethods
 
-    wrap :prefix
-    def first
-      'first'
+    wrap :ruby
+    def great
+      'great'
     end
 
-    decorator :suffix
-    def second
-      'second'
+    decorator :python
+    def not_bad
+      'not bad'
     end
 
-    wrap Decorator
-    def third
-      'third'
+    decorator Decorator
+    def best
+      'best in the world'
     end
 
   end
@@ -52,7 +52,20 @@ describe Rdecorator do
   subject { DummyClass.new }
 
   it 'normal' do
-    expect(subject.first).to include 'first'
+    expect(subject.great).to include 'great'
   end
+
+  describe 'simple pattern' do
+
+    it 'wrap decorate' do
+      expect(subject.great).to eq 'great ruby'
+    end
+
+    it 'decorator alias' do
+      expect(subject.not_bad).to eq 'not bad python'
+    end
+
+  end
+
 
 end
