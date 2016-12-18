@@ -10,7 +10,7 @@ describe Rdecorator do
     end
 
     def call
-      @this.call(*args)
+      @this.call(*@args) << ' php'
     end
 
   end
@@ -63,6 +63,14 @@ describe Rdecorator do
 
     it 'decorator alias' do
       expect(subject.not_bad).to eq 'not bad python'
+    end
+
+  end
+
+  describe 'Decorator class' do
+
+    it 'php' do
+      expect(subject.best).to eq 'best in the world php'
     end
 
   end
