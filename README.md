@@ -16,6 +16,25 @@ And then execute:
 
 ## Usage
 
+```ruby
+class Language
+		extend Rdecorator
+
+		def best(this, args)
+				'best Language' + this.call(args)	
+		end
+
+		wrap :best
+		def ruby
+				'ruby'	
+		end
+end
+
+Language.new.ruby #=> best Language ruby
+
+
+```
+
 
 ## Contributing
 
