@@ -9,8 +9,8 @@ Gem::Specification.new do |spec|
   spec.authors       = ["Jason Hou"]
   spec.email         = ["hjj1992@gmail.com"]
 
-  spec.summary       = %q{}
-  spec.description   = %q{}
+  spec.summary       = %q{The decorator design pattern for ruby}
+  spec.description   = %q{Python like decorator in ruby}
   spec.homepage      = "http://github.com/falm/rdecorator"
 
   spec.files         = `git ls-files -z`.split("\x0").reject do |f|
