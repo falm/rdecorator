@@ -2,6 +2,11 @@ require "rdecorator/version"
 
 module Rdecorator
 
+  def initialize(this, *args)
+    @this = this
+    @args = args
+  end
+
   def method_added(method_name)
 
     unless decorator_methods.empty?
