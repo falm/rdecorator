@@ -16,6 +16,7 @@ And then execute:
 
 ## Usage
 
+### Basic
 ```ruby
 class Language
 		extend Rdecorator
@@ -32,9 +33,28 @@ end
 
 Language.new.ruby #=> best Language ruby
 
-
 ```
 
+### Decorator Class
+```ruby
+class Decorator 
+
+	include Rdecorator
+
+	def call
+		'say fucking' + @this.call(*@args)
+	end
+end
+
+class DummyClass
+
+	decorator Decorator
+	def say(hello)
+				'hello'	
+	end
+
+end
+```
 
 ## Contributing
 
