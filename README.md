@@ -1,6 +1,8 @@
 # RDecorator
+[![Build Status](https://travis-ci.org/falm/rdecorator.svg?branch=master)](https://travis-ci.org/falm/rdecorator) 
 
 Rdecorator is an Pyhton like decorator use for AOP pattern programming
+
 
 ## Installation
 
