@@ -1,5 +1,5 @@
 # RDecorator
-[![Build Status](https://travis-ci.org/falm/rdecorator.svg?branch=master)](https://travis-ci.org/falm/rdecorator) [![Coverage Status](https://coveralls.io/repos/github/falm/rdecorator/badge.svg?branch=master)](https://coveralls.io/github/falm/rdecorator?branch=master) [![Dependency Status](https://gemnasium.com/badges/github.com/falm/rdecorator.svg)](https://gemnasium.com/github.com/falm/rdecorator)
+[![Build Status](https://travis-ci.org/falm/rdecorator.svg?branch=master)](https://travis-ci.org/falm/rdecorator) [![Coverage Status](https://coveralls.io/repos/github/falm/rdecorator/badge.svg?branch=master)](https://coveralls.io/github/falm/rdecorator?branch=master) [![Dependency Status](https://gemnasium.com/badges/github.com/falm/rdecorator.svg)](https://gemnasium.com/github.com/falm/rdecorator) [![Code Climate](https://codeclimate.com/github/falm/rdecorator/badges/gpa.svg)](https://codeclimate.com/github/falm/rdecorator)
 
 Rdecorator is an Pyhton like decorator use for AOP pattern programming
 
@@ -14,23 +14,23 @@ gem 'rdecorator', github: 'https://github.com/falm/rdecorator.git'
 
 And then execute:
 
-    $ bundle
+  $ bundle
 
 ## Usage
 
 ### Basic
 ```ruby
 class Language
-		extend Rdecorator
+  extend Rdecorator
 
-		def best(this, args)
-				'best Language' + this.call(args)	
-		end
+  def best(this, args)
+    'best Language' + this.call(args)	
+  end
 
-		wrap :best
-		def ruby
-				'ruby'	
-		end
+  wrap :best
+  def ruby
+    'ruby'	
+  end
 end
 
 Language.new.ruby #=> best Language ruby
@@ -41,19 +41,19 @@ Language.new.ruby #=> best Language ruby
 ```ruby
 class Decorator 
 
-	include Rdecorator
+  include Rdecorator
 
-	def call
-		'say fucking' + @this.call(*@args)
-	end
+  def call
+    'say fucking' + @this.call(*@args)
+  end
 end
 
 class DummyClass
 
-	decorator Decorator
-	def say(hello)
-				'hello'	
-	end
+  decorator Decorator
+  def say(hello)
+    'hello'	
+  end
 
 end
 ```
