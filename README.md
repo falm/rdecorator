@@ -1,5 +1,5 @@
 # RDecorator
-[![Build Status](https://travis-ci.org/falm/rdecorator.svg?branch=master)](https://travis-ci.org/falm/rdecorator) [![Coverage Status](https://coveralls.io/repos/github/falm/rdecorator/badge.svg?branch=master)](https://coveralls.io/github/falm/rdecorator?branch=master)
+[![Build Status](https://travis-ci.org/falm/rdecorator.svg?branch=master)](https://travis-ci.org/falm/rdecorator) [![Coverage Status](https://coveralls.io/repos/github/falm/rdecorator/badge.svg?branch=master)](https://coveralls.io/github/falm/rdecorator?branch=master) [![Dependency Status](https://gemnasium.com/badges/github.com/falm/rdecorator.svg)](https://gemnasium.com/github.com/falm/rdecorator)
 
 Rdecorator is an Pyhton like decorator use for AOP pattern programming
 
