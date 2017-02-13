@@ -4,10 +4,7 @@ describe Rdecorator do
 
   class Decorator
 
-    def initialize(this, *args)
-      @this = this
-      @args = args
-    end
+    include Rdecorator
 
     def call
       @this.call(*@args) << ' php'
