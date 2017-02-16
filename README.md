@@ -9,7 +9,7 @@ Rdecorator is an Pyhton like decorator use for AOP pattern programming
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'rdecorator', github: 'https://github.com/falm/rdecorator.git'
+gem 'rdecorator'
 ```
 
 And then execute:
