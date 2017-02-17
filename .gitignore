@@ -9,4 +9,5 @@
 /tmp/
 
 .idea/
+*.gem
 *.un~
